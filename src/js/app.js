@@ -1,12 +1,10 @@
 import $ from 'jquery';
 import {parseCode} from './code-analyzer';
-import {tree} from './code-analyzer';
 
 $(document).ready(function () {
     $('#codeSubmissionButton').click(() => {
         let codeToParse = $('#codePlaceholder').val();
         let structures = parseCode(codeToParse);
-        $('#parsedCode').val(JSON.stringify(tree(codeToParse), null, 2));
         var head = '            <thead>\n' +
             '            <tr>\n' +
             '                <th>Line</th>\n' +

@@ -80,7 +80,7 @@ function handleTypes(node, ans) {
     }
 }//
 
-function progHandle(parsed){
+    function progHandle(parsed){
     let ans = [];
     traverse(parsed,function (node) {
         if(node.type === undefined) {
